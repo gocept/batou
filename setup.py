@@ -4,9 +4,10 @@
 and deployments.
 """
 
-from setuptools import setup, find_packages
 import glob
 import os.path
+
+from setuptools import find_packages, setup
 
 
 def project_path(*names):
@@ -28,7 +29,7 @@ setup(
         "Jinja2",
         "requests",
         # ConfigUpdater does not manage its minimum requirements correctly.
-        "setuptools>=38.3",
+        "setuptools>=56.2",
         "execnet",
         "pyyaml",
         "py",],
