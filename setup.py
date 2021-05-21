@@ -28,11 +28,14 @@ setup(
         "ConfigUpdater",
         "Jinja2",
         "requests",
-        # ConfigUpdater does not manage its minimum requirements correctly.
-        "setuptools>=56.2",
         "execnet",
         "pyyaml",
-        "py",],
+        "py",
+        # ConfigUpdater does not manage its minimum requirements correctly
+        # and to fix Python 3.10
+        "setuptools>=56.2",
+        # Unclean dependency of urllib3/requests and to fix Python 3.10
+        "six>=1.16",],
     extras_require={
         "test": ["pytest", "pytest-timeout", "pytest-coverage", "mock"]},
     entry_points="""
