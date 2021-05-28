@@ -27,6 +27,7 @@ setup(
         "setuptools>=38.3",
         "execnet",
         "pyyaml",
+        "importlib_metadata",
         "py",],
     extras_require={
         "test": ["pytest", "pytest-timeout", "pytest-coverage", "mock"]},
@@ -39,6 +40,8 @@ setup(
             update_requirements = batou.release:update_requirements
         [zest.releaser.postreleaser.after]
             update_requirements = batou.release:update_requirements
+        [batou.provisioners]
+            fc-nixos-dev-container = batou.provision:FCDevContainer
     """,
     author="Christian Theune",
     author_email="ct@flyingcircus.io",
