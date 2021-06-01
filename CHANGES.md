@@ -6,6 +6,10 @@
 
 - NetLoc objects are now comparable. (#88)
 
+- Implement dynamic, pluggable provisioning of hosts.
+
+  We provide a built-in plugin to support NixOS development containers
+  that feel similar to the Flying Circus VM platform.
 
 2.3b1 (2021-05-21)
 ------------------
